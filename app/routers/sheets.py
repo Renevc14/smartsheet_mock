@@ -23,8 +23,8 @@ def create_sheet(payload: CreateSheetRequest, _: bool = Depends(auth_dep)):
     }
     sheets.append(sheet)
     save_sheets(sheets)
-    save_columns(new_id, sheet["columns"])  # persist columns
-    save_rows(new_id, [])                    # start empty rows
+    save_columns(new_id, sheet["columns"])  
+    save_rows(new_id, [])            
     return sheet
 
 @router.get("/{sheet_id}")
@@ -33,7 +33,6 @@ def get_sheet(sheet_id: int, _: bool = Depends(auth_dep)):
     found = next((s for s in sheets if s["id"] == sheet_id), None)
     if not found:
         raise HTTPException(status_code=404, detail="Sheet not found")
-    # attach rows and columns
     cols = load_columns(sheet_id)
     rows = load_rows(sheet_id)
     return {**found, "columns": cols, "rows": rows}
@@ -46,5 +45,4 @@ def delete_sheet(sheet_id: int, _: bool = Depends(auth_dep)):
     if len(sheets) == before:
         raise HTTPException(status_code=404, detail="Sheet not found")
     save_sheets(sheets)
-    # rows/columns files remain; in real life you might also purge them
     return

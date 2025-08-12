@@ -25,18 +25,54 @@
   },
   {
     "id": 1002,
-    "name": "My Tasks",
+    "name": "Mock API Smartsheet",
     "columns": [
       {
-        "id": 11,
-        "title": "Task",
+        "id": 1,
+        "title": "Task ID",
         "type": "TEXT_NUMBER",
         "primary": true
       },
       {
-        "id": 12,
+        "id": 2,
+        "title": "Task Name",
+        "type": "TEXT_NUMBER",
+        "primary": false
+      },
+      {
+        "id": 3,
         "title": "Assignee",
         "type": "CONTACT_LIST",
+        "primary": false
+      },
+      {
+        "id": 4,
+        "title": "Status",
+        "type": "PICKLIST",
+        "primary": false
+      },
+      {
+        "id": 5,
+        "title": "Priority",
+        "type": "PICKLIST",
+        "primary": false
+      },
+      {
+        "id": 6,
+        "title": "Start Date",
+        "type": "DATE",
+        "primary": false
+      },
+      {
+        "id": 7,
+        "title": "Due Date",
+        "type": "DATE",
+        "primary": false
+      },
+      {
+        "id": 8,
+        "title": "Notes",
+        "type": "TEXT_NUMBER",
         "primary": false
       }
     ]

@@ -1,39 +1,19 @@
 [
   {
-    "id": 2001,
+    "id": 2002,
     "cells": [
       {
         "columnId": 1,
-        "value": "Website Redesign (v2)"
+        "value": "Mobile App"
       },
       {
         "columnId": 2,
-        "value": "ana@acme.com"
+        "value": "bob@acme.com"
       },
       {
         "columnId": 3,
-        "value": "In Review"
+        "value": "Pending"
       }
-    ],
-    "modifiedAt": "2025-08-12T05:24:21.460357"
-  },
-  {
-    "id": 3001,
-    "cells": [
-      {
-        "columnId": 1,
-        "value": "Data Pipeline"
-      },
-      {
-        "columnId": 2,
-        "value": "carlos@acme.com"
-      },
-      {
-        "columnId": 3,
-        "value": "Done"
-      }
-    ],
-    "createdAt": "2025-08-12T05:24:21.429537",
-    "modifiedAt": "2025-08-12T05:24:21.429537"
+    ]
   }
 ]

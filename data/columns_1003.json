@@ -1,13 +1,13 @@
 [
   {
-    "id": 11,
-    "title": "Task",
+    "id": 1,
+    "title": "Tareas",
     "type": "TEXT_NUMBER",
     "primary": true
   },
   {
-    "id": 12,
-    "title": "Assignee",
+    "id": 2,
+    "title": "RV",
     "type": "CONTACT_LIST",
     "primary": false
   }
