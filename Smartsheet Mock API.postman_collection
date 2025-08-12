@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "e0a7e68c-59d5-4122-9efd-461f6fe40200",
+		"name": "Smartsheet Mock API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30699434"
+	},
+	"item": [
+		{
+			"name": "Sheets",
+			"item": [
+				{
+					"name": "List all sheets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/sheets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"sheets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create sheet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"New Sheet\",\n    \"columns\": [\n        {\n            \"id\": 1,\n            \"title\": \"Name\",\n            \"type\": \"TEXT_NUMBER\",\n            \"primary\": true\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Owner\",\n            \"type\": \"CONTACT_LIST\",\n            \"primary\": false\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/sheets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"sheets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific sheet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/sheets/1003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"sheets",
+								"1003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete sheet",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/sheets/1003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"sheets",
+								"1003"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Columns",
+			"item": [
+				{
+					"name": "List columns",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/sheets/1003/columns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"sheets",
+								"1003",
+								"columns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add columns",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": 3,\n        \"title\": \"Status\",\n        \"type\": \"PICKLIST\",\n        \"primary\": false\n    }\n]"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/sheets/1003/columns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"sheets",
+								"1003",
+								"columns"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rows",
+			"item": [
+				{
+					"name": "Add rows",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"toBottom\": true,\n    \"rows\": [\n        {\n            \"id\": 4,\n            \"cells\": [\n                {\"columnId\": 1, \"value\": \"RBVC\"},\n                {\"columnId\": 2, \"value\": \"RBVC@RBVC.com\"}\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/sheets/1003/rows",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"sheets",
+								"1003",
+								"rows"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update row",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cells\": [\n        {\"columnId\": 1, \"value\": \"Website Redesign (v2)\"},\n        {\"columnId\": 2, \"value\": \"newemail@domain.com\"}\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/rows/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"rows",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete row",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/rows/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"rows",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Search rows",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer FAKE_TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/2.0/search?query=RBVC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"2.0",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "RBVC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
