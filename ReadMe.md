@@ -17,27 +17,6 @@ It includes endpoints for managing **Sheets**, **Columns**, **Rows**, **Attachme
 
 ---
 
-## 📂 Project Structure
-
-smartsheet_mock/
-├─ app/
-│ ├─ main.py
-│ ├─ auth.py
-│ ├─ deps.py
-│ ├─ models.py
-│ ├─ storage.py
-│ ├─ utils.py
-│ └─ routers/
-├─ client/
-│ └─ smartsheet_client.py
-├─ data/
-├─ scripts/
-│ └─ seed_data.py
-├─ tests/
-└─ requirements.txt
-
----
-
 ## ⚙️ Installation
 
 1. **Clone the repository**
@@ -59,3 +38,30 @@ Linux/Mac:
 
 4. **Load sample data (seed)**
     python scripts/seed_data.py
+
+
+# Running the API
+Start the server with:
+
+bash
+Copy
+Edit
+uvicorn app.main:app --reload
+By default, the API will be available at:
+
+bash
+Copy
+Edit
+http://localhost:8000/api/2.0
+Test token:
+
+makefile
+Copy
+Edit
+Authorization: Bearer FAKE_TOKEN
+Example request:
+
+bash
+Copy
+Edit
+curl -H "Authorization: Bearer FAKE_TOKEN" http://localhost:8000/api/2.0/sheets
