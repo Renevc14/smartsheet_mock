@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": 2001,
+    "cells": [
+      {
+        "columnId": 1,
+        "value": "Website Redesign"
+      },
+      {
+        "columnId": 2,
+        "value": "ana@acme.com"
+      },
+      {
+        "columnId": 3,
+        "value": "In Progress"
+      }
+    ]
+  },
+  {
+    "id": 2002,
+    "cells": [
+      {
+        "columnId": 1,
+        "value": "Mobile App"
+      },
+      {
+        "columnId": 2,
+        "value": "bob@acme.com"
+      },
+      {
+        "columnId": 3,
+        "value": "Pending"
+      }
+    ]
+  }
+]

@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Name",
+    "type": "TEXT_NUMBER",
+    "primary": true
+  },
+  {
+    "id": 2,
+    "title": "Owner",
+    "type": "CONTACT_LIST",
+    "primary": false
+  },
+  {
+    "id": 3,
+    "title": "Status",
+    "type": "PICKLIST",
+    "primary": false
+  }
+]
