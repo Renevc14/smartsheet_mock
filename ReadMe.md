@@ -45,13 +45,13 @@ smartsheet_mock/
    git clone https://github.com/your_username/smartsheet_mock.git
    cd smartsheet_mock
 2. **Create Virtual Enviroment**
-python -m venv .venv
-# Activate the environment
-# Linux/Mac:
-source .venv/bin/activate
-# Windows:
-.venv\Scripts\activate
-
+    python -m venv .venv
+    # Activate the environment
+    # Linux/Mac:
+    source .venv/bin/activate
+    # Windows:
+    .venv\Scripts\activate
+    
 3. **Install Dependencies**
     ```bash
     pip install -r requirements.txt
