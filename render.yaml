@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: smartsheet-mock-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 81 --reload"
+    branches:
+      - main
+    envVars:
+      - key: "FASTAPI_TOKEN"
+        value: "FAKE_TOKEN"
