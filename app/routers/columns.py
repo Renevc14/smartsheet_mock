@@ -14,7 +14,6 @@ def list_columns(sheet_id: int, _: bool = Depends(auth_dep)):
 def add_columns(sheet_id: int, cols: List[Column], _: bool = Depends(auth_dep)):
     existing = load_columns(sheet_id)
     existing_ids = [c["id"] for c in existing]
-    # evitar colisiones simples
     for c in cols:
         if c.id in existing_ids:
             raise HTTPException(status_code=400, detail=f"Column id {c.id} already exists")

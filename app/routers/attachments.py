@@ -5,7 +5,6 @@ router = APIRouter(prefix="/sheets/{sheet_id}/rows/{row_id}/attachments", tags=[
 
 @router.get("")
 def list_attachments(sheet_id: int, row_id: int, _: bool = Depends(auth_dep)):
-    # demo: no persistimos; devolvemos simulado
     return [{"id": 1, "name": "link", "url": "https://example.com"}]
 
 @router.post("")

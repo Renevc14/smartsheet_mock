@@ -13,13 +13,11 @@ def add_rows(sheet_id: int, body: AddRowsRequest, _: bool = Depends(auth_dep)):
     cols = load_columns(sheet_id)
     col_ids = {c["id"] for c in cols}
 
-    # validar columnas
     for r in body.rows:
         for cell in r.cells:
             if cell.columnId not in col_ids:
                 raise HTTPException(status_code=400, detail=f"Unknown columnId {cell.columnId}")
 
-    # insertar (simple: siempre al final si toBottom)
     for r in body.rows:
         payload = r.model_dump()
         payload["createdAt"] = datetime.utcnow().isoformat()
@@ -29,14 +27,12 @@ def add_rows(sheet_id: int, body: AddRowsRequest, _: bool = Depends(auth_dep)):
     save_rows(sheet_id, rows)
     return {"message": "rows added", "inserted": len(body.rows)}
 
-# endpoints de fila individual para update/delete
 
-from fastapi import APIRouter as _AR  # evitar colisión de router
+from fastapi import APIRouter as _AR
 row_router = _AR(prefix="/rows", tags=["Rows (ID)"])
 
 @row_router.put("/{row_id}")
 def update_row(row_id: int, body: UpdateRowRequest, _: bool = Depends(auth_dep)):
-    # buscar fila en cualquier sheet (simple)
     from ..storage import DATA, rows_file
     for rf in DATA.glob("rows_*.json"):
         rows = load_rows(int(rf.stem.split("_")[1]))

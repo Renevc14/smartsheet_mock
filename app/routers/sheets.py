@@ -23,8 +23,8 @@ def create_sheet(payload: CreateSheetRequest, _: bool = Depends(auth_dep)):
     }
     sheets.append(sheet)
     save_sheets(sheets)
-    save_columns(new_id, sheet["columns"])  
-    save_rows(new_id, [])            
+    save_columns(new_id, sheet["columns"])
+    save_rows(new_id, [])
     return sheet
 
 @router.get("/{sheet_id}")

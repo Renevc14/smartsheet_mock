@@ -4,7 +4,6 @@ from app.main import app
 client = TestClient(app)
 HEAD = {"Authorization": "Bearer FAKE_TOKEN"}
 
-# Nota: asume que seed_data ya creó sheet 1001 y rows 2001/2002
 
 def test_add_rows_and_search():
     body = {

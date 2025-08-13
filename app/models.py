@@ -5,7 +5,7 @@ from datetime import datetime
 class Column(BaseModel):
     id: int
     title: str
-    type: str = "TEXT_NUMBER" 
+    type: str = "TEXT_NUMBER"
     primary: bool = False
 
 class Cell(BaseModel):

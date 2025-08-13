@@ -47,7 +47,6 @@ def load_columns(sheet_id: int) -> List[Dict]:
 def save_columns(sheet_id: int, cols: List[Dict]):
     _save_json(columns_file(sheet_id), cols)
 
-# ID helpers
 
 def next_id(existing: List[int], start: int = 1000) -> int:
     n = max(existing) + 1 if existing else start

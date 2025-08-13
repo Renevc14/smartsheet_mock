@@ -22,17 +22,14 @@ sheet = {
     ]
 }
 
-# Save the sheet data to the sheets.json file
 sheets_file = DATA / "sheets.json"
 sheets = [sheet]
 sheets_file.write_text(json.dumps(sheets, indent=2))
 
-# Create columns for the sheet (this is to persist columns separately)
 columns = sheet["columns"]
 columns_file = DATA / "columns_1001.json"
 columns_file.write_text(json.dumps(columns, indent=2))
 
-# Create the rows (tasks) for the sheet
 rows = [
     {
         "id": 2,
@@ -101,7 +98,6 @@ rows = [
     }
 ]
 
-# Save the rows data to the rows_1001.json file
 rows_file = DATA / "rows_1001.json"
 rows_file.write_text(json.dumps(rows, indent=2))
 
