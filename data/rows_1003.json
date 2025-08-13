@@ -1,1 +1,197 @@
-[]
+[
+  {
+    "id": 2,
+    "cells": [
+      {
+        "columnId": 1,
+        "value": "2"
+      },
+      {
+        "columnId": 2,
+        "value": "Diseñar la estructura de la API"
+      },
+      {
+        "columnId": 3,
+        "value": "Ana"
+      },
+      {
+        "columnId": 4,
+        "value": "In Progress"
+      },
+      {
+        "columnId": 5,
+        "value": "High"
+      },
+      {
+        "columnId": 6,
+        "value": "2025-08-02"
+      },
+      {
+        "columnId": 7,
+        "value": "2025-08-07"
+      },
+      {
+        "columnId": 8,
+        "value": "Diseñar la estructura básica de la API, incluyendo endpoints y parámetros."
+      }
+    ],
+    "createdAt": "2025-08-13T04:25:50.983846",
+    "modifiedAt": "2025-08-13T04:25:50.983846"
+  },
+  {
+    "id": 3,
+    "cells": [
+      {
+        "columnId": 1,
+        "value": "3"
+      },
+      {
+        "columnId": 2,
+        "value": "Implementar autenticación en la API"
+      },
+      {
+        "columnId": 3,
+        "value": "Carlos"
+      },
+      {
+        "columnId": 4,
+        "value": "Pending"
+      },
+      {
+        "columnId": 5,
+        "value": "High"
+      },
+      {
+        "columnId": 6,
+        "value": "2025-08-08"
+      },
+      {
+        "columnId": 7,
+        "value": "2025-08-14"
+      },
+      {
+        "columnId": 8,
+        "value": "Implementar autenticación basada en token (JWT) para la API."
+      }
+    ],
+    "createdAt": "2025-08-13T04:25:50.983846",
+    "modifiedAt": "2025-08-13T04:25:50.983846"
+  },
+  {
+    "id": 4,
+    "cells": [
+      {
+        "columnId": 1,
+        "value": "4"
+      },
+      {
+        "columnId": 2,
+        "value": "Crear endpoints para gestión de usuarios"
+      },
+      {
+        "columnId": 3,
+        "value": "Juan"
+      },
+      {
+        "columnId": 4,
+        "value": "Not Started"
+      },
+      {
+        "columnId": 5,
+        "value": "Medium"
+      },
+      {
+        "columnId": 6,
+        "value": "2025-08-10"
+      },
+      {
+        "columnId": 7,
+        "value": "2025-08-20"
+      },
+      {
+        "columnId": 8,
+        "value": "Desarrollar endpoints para agregar, editar y eliminar usuarios."
+      }
+    ],
+    "createdAt": "2025-08-13T04:25:50.983846",
+    "modifiedAt": "2025-08-13T04:25:50.983846"
+  },
+  {
+    "id": 5,
+    "cells": [
+      {
+        "columnId": 1,
+        "value": "5"
+      },
+      {
+        "columnId": 2,
+        "value": "Escribir documentación para la API"
+      },
+      {
+        "columnId": 3,
+        "value": "Laura"
+      },
+      {
+        "columnId": 4,
+        "value": "Pending"
+      },
+      {
+        "columnId": 5,
+        "value": "Medium"
+      },
+      {
+        "columnId": 6,
+        "value": "2025-08-12"
+      },
+      {
+        "columnId": 7,
+        "value": "2025-08-15"
+      },
+      {
+        "columnId": 8,
+        "value": "Crear la documentación detallada de la API, incluyendo ejemplos de uso."
+      }
+    ],
+    "createdAt": "2025-08-13T04:25:50.983846",
+    "modifiedAt": "2025-08-13T04:25:50.983846"
+  },
+  {
+    "id": 6,
+    "cells": [
+      {
+        "columnId": 1,
+        "value": "6"
+      },
+      {
+        "columnId": 2,
+        "value": "Realizar pruebas unitarias de la API"
+      },
+      {
+        "columnId": 3,
+        "value": "Pedro"
+      },
+      {
+        "columnId": 4,
+        "value": "Not Started"
+      },
+      {
+        "columnId": 5,
+        "value": "High"
+      },
+      {
+        "columnId": 6,
+        "value": "2025-08-16"
+      },
+      {
+        "columnId": 7,
+        "value": "2025-08-22"
+      },
+      {
+        "columnId": 8,
+        "value": "Escribir y ejecutar pruebas unitarias para asegurar la funcionalidad de los endpoints."
+      }
+    ],
+    "createdAt": "2025-08-13T04:25:50.983846",
+    "modifiedAt": "2025-08-13T04:25:50.983846"
+  }
+]
