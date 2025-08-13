@@ -2,41 +2,51 @@
 
   
 
-A mock API that simulates part of the official Smartsheet API functionality, built with **FastAPI** for technical practice and local development.
+A mock API that simulates part of the official Smartsheet API functionality, built with FastAPI for technical practice and local development.
 
-It includes endpoints for managing **Sheets**, **Columns**, **Rows**, **Attachments**, and search, along with a Python client and a set of automated tests using `pytest`.
+It includes endpoints for managing Sheets, Columns, Rows, Attachments, and search, along with a Python client and a set of automated tests using `pytest`.
 
-  
 
----
 
-  
+## Features
 
-## 🚀 Features
-
-  
-
-- Basic CRUD operations for **Sheets** and **Rows**
+- Basic CRUD operations for Sheets and Rows
 
 - Text search across all sheets
 
-- Simple **Bearer Token** authentication
+- Simple Bearer Token authentication
 
 - JSON file-based persistence
-
-- Python client (`client/smartsheet_client.py`) for interacting with the API
 
 - Seed script to load sample data
 
 - Unit tests with `pytest` for core endpoints
 
-  
+- Deployed on Render with Docker containerization
 
----
+## Access Links
 
-  
+- Local Server (Development): http://localhost:8000/api/2.0
 
-## ⚙️ Installation
+- Deployed on Render: https://smartsheet-mock.onrender.com/api/2.0
+
+
+## Docker Setup
+
+1. **Build Docker Image**
+Build the Docker iamge using the following command:
+```bash
+docker build -t smartsheet-mock-api .
+```
+This command will create a Docker image with the tag smartsheet-mock-api.
+
+2. **Run the Container Locally**
+Once the image is built, you can run the container locally using the following command:
+```bash
+docker run -p 8000:8000 smartsheet-mock-api
+```
+This command will run the API inside the Docker container and expose it on port 8000. You can access the API locally at `http://localhost:8000`
+## Installation
 
   
 
